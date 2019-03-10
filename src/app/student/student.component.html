@@ -1,0 +1,33 @@
+<button (click)="onLogout()" name="logout" id="logout">Logout</button>|
+<button type="button" name="deletAll" (click)="deleteAll()">deletAll</button>
+<hr>
+<div class="student">
+<input type="text" [(ngModel)]="student.id" name="id" placeholder="id" ><br><br>
+<input type="text" [(ngModel)]="student.firstName" name="firstName" placeholder="firstName"><br><br>
+<input type="text" [(ngModel)]="student.lastName" name="lastName" placeholder="lastName"><br><br>
+<input type="text" [(ngModel)]="student.email"  name="email" placeholder="email"><br><br>
+<input type="text" [(ngModel)]="student.phone" name="phone" placeholder="phone"><br><br>
+<input type="button" (click)="add()" value="add" name="add"><br><br>
+
+</div>
+<div class="students">
+  <ul>
+    <li *ngFor="let student of students">
+      <table class="students">
+        <thead></thead>
+        <tr>
+          <td>{{student.id}}</td>
+          <td>{{student.firstName}}</td>
+          <td>{{student.lastName}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.phone}}</td>
+          <td><button type="button" name="selectStudent" (click)="selectStudent(student)">selectStudent</button></td>
+          <td><button type="button" name="deleteStudent" (click)="deleteStudent(student.id)">deleteStudent</button></td>
+          <td><button type="button" (click)="updateStudent()" value="update" name="update">update</button>
+          </td>
+        </tr>
+      </table>
+    </li>
+    
+  </ul>
+</div>

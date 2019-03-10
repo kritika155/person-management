@@ -1,0 +1,8 @@
+.students ul li{
+    list-style-type: none;
+    
+}
+.students td{
+    text-align: center;
+  width: 1%;
+}
